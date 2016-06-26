@@ -14,7 +14,7 @@ class SafePage
     p :info_text_description, class: 'info-text', frame: frame
   end
 
-  def check_extension
+  def check_extension_on_safe_website
     close_welcome if close_welcome_element.visible?
     wait_until { avira_small_element.visible? }
     avira_small_element.hover
@@ -27,20 +27,4 @@ class SafePage
     indicator_element.click
   end
 
-
-  # def check_website_safe_or_not(expected_text_title, info_text)
-  #   wait_until { title_inside_extension_element.visible? }
-  #     if
-  #     title_inside_extension == expected_text_title
-  #       p "Website status is OK - '#{expected_text_title}'"
-  #     else
-  #       raise "WebSite status differs from #{expected_text_title}"
-  #     end
-  #   wait_until { info_text_description_element.visible? }
-  #     if
-  #     info_text_description_element.text.include?(info_text)
-  #     else
-  #       raise "Info text differs from '#{info_text}'"
-  #     end
-  # end
 end

@@ -6,11 +6,11 @@ module CheckTextHelper
     p :info_text_description, class: 'info-text', frame: frame
   end
 
-  def extension_text_check(expected_text_title, info_text)
+  def extension_status_check(expected_text_title, info_text)
     wait_until { title_inside_extension_element.visible? }
     if
     title_inside_extension == expected_text_title
-      p "Website status is OK - '#{expected_text_title}'"
+      puts "Website status is OK - '#{expected_text_title}'"
     else
       raise "WebSite status differs from #{expected_text_title}"
     end
