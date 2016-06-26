@@ -1,6 +1,7 @@
 # Avira UI - basic check for Avira Browser Safety extension
-
-This test suite created for Chrome extension. Installation of Chrome extension required before executing tests.
+Two basic checks for Avira Browser Safety, when opens safe and unsafe websites and tests check browser extension behavior.
+This test suite created for Chrome extension. Installation of Chrome extension required before executing tests. 
+Change extension path in /extension-testing/features/support/hooks.rb
 
 ## Installation
 
@@ -18,14 +19,14 @@ For linux machines:
 
     $ git clone git@github.com:a0rthur0/extension_testing
 
-- Make sure you have chrome installed
+- Make sure you have chrome and chromedriver installed
 - Install the bundler gem:
 
     $ rvm 2.1.3 do gem install bundler
 
 - Install all of the required gems defined in the gemfile:
 
-    $ cd /project_folder_path/avira-ui/
+    $ cd /project_folder_path/extension-testing/
     $ rvm 2.1.3 do bundle install
 
 
@@ -33,6 +34,6 @@ For linux machines:
 
 - Run cucumber through:
 
-    $ cucumber features/extension_basic_detection_checks --format html > avira_feature_test.html
+    $ cucumber features/extension_basic_detection_checks.feature --format html > avira_feature_test.html
 
 - Check report in root project folder: open avira_feature_test.html
