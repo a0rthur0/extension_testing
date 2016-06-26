@@ -10,8 +10,6 @@ class SafePage
     div :avira_small, class: 'alien-placeholder', frame: frame
     link :close_welcome, class: 'tour-card-close', frame: frame
     link :indicator, id: 'classification-indicator', frame: frame
-    header :title_inside_extension, class: 'big-title', frame: frame
-    p :info_text_description, class: 'info-text', frame: frame
   end
 
   def check_extension_on_safe_website
