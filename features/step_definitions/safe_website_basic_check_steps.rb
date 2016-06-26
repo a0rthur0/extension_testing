@@ -2,7 +2,7 @@ Given(/^I am on a given safe page$/) do
   visit(SafePage)
 end
 
-And(/^I see that extension visible I click$/) do
+And(/^I see that extension visible and click on it$/) do
   on(SafePage).check_extension
 end
 

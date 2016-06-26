@@ -11,7 +11,7 @@ And(/^I click Add exception and continue$/) do
   on(WarningPage).add_exception_for_site
 end
 
-And(/^I check extension exist for unsafe website$/) do
+And(/^I check extension existence for unsafe website$/) do
   on(UnsafePage).check_extension_on_unsafe_website
 end
 
